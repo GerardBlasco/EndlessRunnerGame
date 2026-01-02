@@ -114,9 +114,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1709375384651492298}
+  - component: {fileID: -7956154419312402040}
   m_Layer: 0
   m_Name: MapSection
-  m_TagString: Untagged
+  m_TagString: MapSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +141,19 @@ Transform:
   - {fileID: 695905245241243374}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7956154419312402040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444207156224468391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c37988a24937704e919bc1dc79c0c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSectionsInGame: 3
 --- !u!1 &1931750070024442399
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class TriggerSectionGenerator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("WallTrigger"))
         {
-            Instantiate(sectionPrefab);
+            Instantiate(sectionPrefab, new Vector3(0, 0, 20f), Quaternion.identity);
         }
     }
 }
