@@ -50,4 +50,9 @@ public class ProgressionManager : MonoBehaviour
     {
         return difficulty;
     }
+
+    public int GetPoints()
+    {
+        return points;
+    }
 }

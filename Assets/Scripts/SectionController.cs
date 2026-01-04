@@ -9,7 +9,10 @@ public class SectionController : MonoBehaviour
     [SerializeField] private float moveMagnitude = 10f;
     [SerializeField] private int maxSectionsInGame = 3;
     public static List<GameObject> existingSections = new List<GameObject>();
-    
+
+    private float moveSpeed = 0;
+    private float maxSpeed = 40f;
+
     private void Start()
     {
         progressionManager = ProgressionManager.instance;
@@ -20,6 +23,7 @@ public class SectionController : MonoBehaviour
     {
         DestroySection();
         MoveSection();
+        SpeedUp();
     }
 
     public void DestroySection()
@@ -31,8 +35,15 @@ public class SectionController : MonoBehaviour
         }
     }
 
+    public void SpeedUp()
+    {
+        moveSpeed = moveMagnitude + progressionManager.GetPoints();
+
+        moveSpeed = Mathf.Clamp(moveSpeed, moveMagnitude, maxSpeed);
+    }
+
     public void MoveSection()
     {
-        transform.position += new Vector3(0, 0, -moveMagnitude) * Time.deltaTime;
+        transform.position += new Vector3(0, 0, -moveSpeed) * Time.deltaTime;
     }
 }
