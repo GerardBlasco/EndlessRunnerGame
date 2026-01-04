@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WallTrigger
   - MapSection
+  - ObstacleSpawn
   layers:
   - Default
   - TransparentFX

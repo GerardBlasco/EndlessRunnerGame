@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             timer += Time.deltaTime * speed;
 
             transform.position = Vector3.Lerp(transform.position,
-            new Vector3(rows[currentRow].transform.position.x, transform.position.y, transform.position.z),
+            new Vector3(rows[currentRow].transform.position.x, transform.position.y, rows[currentRow].transform.position.z),
             timer);
         }
     }
