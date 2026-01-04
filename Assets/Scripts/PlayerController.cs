@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        inputManager = InputManager.instance; 
+        inputManager = InputManager.instance;
     }
 
     private void Update()
