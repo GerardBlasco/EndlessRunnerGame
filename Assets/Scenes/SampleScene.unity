@@ -505,7 +505,10 @@ MonoBehaviour:
   sectionPrefab1: {fileID: 0}
   sectionPrefab2: {fileID: 0}
   sectionPrefab3: {fileID: 0}
-  sectionPrefabs: []
+  sectionPrefabs:
+  - {fileID: 1444207156224468391, guid: 7cb00e1c27cb8c24083f258bb2e742a3, type: 3}
+  - {fileID: 1444207156224468391, guid: f7017d145b74b284392bed117d1104e5, type: 3}
+  - {fileID: 1444207156224468391, guid: 18b26eb23d8d2524d8708b22378de989, type: 3}
 --- !u!1001 &8792618056875631140
 PrefabInstance:
   m_ObjectHideFlags: 0

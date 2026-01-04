@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class TriggerSectionGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject sectionPrefab1;
-    [SerializeField] private GameObject sectionPrefab2;
-    [SerializeField] private GameObject sectionPrefab3;
-
     [SerializeField] List<GameObject> sectionPrefabs = new List<GameObject>();
-
-    private GameObject activeSection;
-    private int difficulty = 0;
+    [SerializeField] private int difficulty = 0;
 
     public void AddDifficulty()
     {
-
+        difficulty++;
     }
 
     private void OnTriggerEnter(Collider other)
