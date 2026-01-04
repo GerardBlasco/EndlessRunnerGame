@@ -308,6 +308,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 22.487, y: 0, z: 0}
+--- !u!1 &1334589232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334589234}
+  - component: {fileID: 1334589233}
+  m_Layer: 0
+  m_Name: ProgressionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1334589233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334589232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb11a32d72e714b4a9b7480f9fe772e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDead: 0
+  points: 0
+--- !u!4 &1334589234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334589232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2515271, y: 9.261333, z: -22.934765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553299081
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b47837e9226534bad2c672ce2c603c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionPrefab: {fileID: 1444207156224468391, guid: 7cb00e1c27cb8c24083f258bb2e742a3, type: 3}
+  sectionPrefab1: {fileID: 0}
+  sectionPrefab2: {fileID: 0}
+  sectionPrefab3: {fileID: 0}
+  sectionPrefabs: []
 --- !u!1001 &8792618056875631140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,3 +571,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 8792618056875631140}
   - {fileID: 1553299085}
+  - {fileID: 1334589234}

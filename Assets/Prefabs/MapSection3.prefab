@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b0517922a24e84e43ac1113a5e81f94d, type: 2}
+  - {fileID: 2100000, guid: db869346333e9464b81d0d271f3bca1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 1709375384651492298}
   - component: {fileID: -7956154419312402040}
   m_Layer: 0
-  m_Name: MapSection
+  m_Name: MapSection3
   m_TagString: MapSection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c37988a24937704e919bc1dc79c0c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveMagnitude: 10
   maxSectionsInGame: 3
 --- !u!1 &1931750070024442399
 GameObject:
@@ -269,7 +270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b0517922a24e84e43ac1113a5e81f94d, type: 2}
+  - {fileID: 2100000, guid: db869346333e9464b81d0d271f3bca1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
