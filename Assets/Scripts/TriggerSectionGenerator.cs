@@ -22,7 +22,7 @@ public class TriggerSectionGenerator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("WallTrigger"))
         {
-            Instantiate(sectionPrefabs[progressionManager.GetDifficulty()], new Vector3(0, 0, 20f), Quaternion.identity);
+            Instantiate(sectionPrefabs[progressionManager.GetDifficulty()], new Vector3(0, 0, 50f), Quaternion.identity);
         }
     }
 }

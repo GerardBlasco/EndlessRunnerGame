@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     private InputManager inputManager;
     private Rigidbody rb;
     private int currentRow = 1;
+    private float timer = 0;
+    private float timerDelay = 0.5f;
+    private float speed = 0.5f;
 
     private void Start()
     {
@@ -22,15 +25,14 @@ public class PlayerController : MonoBehaviour
         {
             ChangeRow();
         }
-        
 
-        //Vector3 movementInput = new Vector3(horizontalMovement, 0f, 0f);
-
-        //rb.velocity = movementInput;
+        MovePlayer();
     }
 
     public void ChangeRow()
     {
+        timer = 0f;
+
         float horizontalMovement = inputManager.horizontal_ia.ReadValue<float>();
 
         if (horizontalMovement > 0)
@@ -43,7 +45,17 @@ public class PlayerController : MonoBehaviour
         }
 
         currentRow = Mathf.Clamp(currentRow, 0, 2);
-        transform.position = new Vector3(rows[currentRow].transform.position.x, transform.position.y, transform.position.z);
+    }
 
+    public void MovePlayer()
+    {
+        if (timer < timerDelay)
+        {
+            timer += Time.deltaTime * speed;
+
+            transform.position = Vector3.Lerp(transform.position,
+            new Vector3(rows[currentRow].transform.position.x, transform.position.y, transform.position.z),
+            timer);
+        }
     }
 }
