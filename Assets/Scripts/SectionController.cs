@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class SectionController : MonoBehaviour
 {
+    private ProgressionManager progressionManager;
     [SerializeField] private float moveMagnitude = 10f;
     [SerializeField] private int maxSectionsInGame = 3;
     public static List<GameObject> existingSections = new List<GameObject>();
-
+    
     private void Start()
     {
+        progressionManager = ProgressionManager.instance;
         existingSections.Add(gameObject);
     }
 
