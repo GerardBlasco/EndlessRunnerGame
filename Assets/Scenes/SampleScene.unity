@@ -644,8 +644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sectionPrefabs:
   - {fileID: 1444207156224468391, guid: 7cb00e1c27cb8c24083f258bb2e742a3, type: 3}
-  - {fileID: 1444207156224468391, guid: f7017d145b74b284392bed117d1104e5, type: 3}
-  - {fileID: 1444207156224468391, guid: 18b26eb23d8d2524d8708b22378de989, type: 3}
+  - {fileID: 7166486268018042848, guid: f7017d145b74b284392bed117d1104e5, type: 3}
+  - {fileID: 3884389098027814708, guid: 18b26eb23d8d2524d8708b22378de989, type: 3}
   difficulty: 0
 --- !u!114 &1553299088
 MonoBehaviour:

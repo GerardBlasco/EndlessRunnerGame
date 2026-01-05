@@ -7,7 +7,7 @@ public class ObstacleGeneration : MonoBehaviour
 {
     [SerializeField] GameObject obstaclePrefab;
     [SerializeField] int minObstacles = 2;
-    [SerializeField] int maxObstacles = 6;
+    [SerializeField] int maxObstacles = 10;
 
     private int totalObstacles = 0;
     private List<GameObject> obstacleSpawns = new List<GameObject>();
@@ -17,13 +17,13 @@ public class ObstacleGeneration : MonoBehaviour
         totalObstacles = Random.Range(minObstacles, maxObstacles);
 
         obstacleSpawns = GameObject.FindGameObjectsWithTag("ObstacleSpawn").ToList();
-       
+
         SpawnObstacles();
         DestroyCurrentSpawns();
     }
 
     public void SpawnObstacles()
-    {      
+    {
         for (int i = 0; i < totalObstacles; i++)
         {
             int randomSpawnIndex = Random.Range(0, obstacleSpawns.Count - 1);
