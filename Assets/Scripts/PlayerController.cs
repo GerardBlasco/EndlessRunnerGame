@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private int currentRow = 1;
     private float timer = 0;
     private float timerDelay = 0.5f;
-    private float speed = 0.5f;
+    private float speed = 5f;
 
     private void Start()
     {

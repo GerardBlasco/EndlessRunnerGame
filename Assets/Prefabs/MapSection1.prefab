@@ -493,8 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4d68405f11fed4bafbac7532facfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 5492672123039579083, guid: a4e153d9bd6258e46b1e50e714ccec81, type: 3}
-  minObstacles: 2
+  obstaclePrefab: {fileID: 7884194613570857456, guid: 078c02900e8a90a41adc12815cd83e46, type: 3}
+  minObstacles: 5
   maxObstacles: 10
 --- !u!1 &1567831081757969105
 GameObject:
