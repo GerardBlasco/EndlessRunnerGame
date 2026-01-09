@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ProgressionManager : MonoBehaviour
@@ -9,11 +10,17 @@ public class ProgressionManager : MonoBehaviour
     [SerializeField] bool playerDead = false;
     [SerializeField] private int points = 0;
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] GameObject pointsPanel;
+    [SerializeField] TextMeshProUGUI pointsText;
 
     private int difficulty = 0;
+    private int score = 0;
+    private int scoreValue = 15;
 
-    private float timer;
+    private float timer, scoreTimer;
     private float timerDelay = 1f;
+    private float scoreTimerDelay = 0.5f;
 
     private void Awake()
     {
@@ -28,13 +35,19 @@ public class ProgressionManager : MonoBehaviour
         }
 
         timer += Time.deltaTime;
+        scoreTimer += Time.deltaTime;
 
         if (timer >= timerDelay)
         {
             timer = 0f;
             EarnPoints();
         }
-        
+
+        if (scoreTimer >= scoreTimerDelay)
+        {
+            scoreTimer = 0f;
+            AddScore();
+        }
     }
 
     public void EarnPoints()
@@ -69,7 +82,16 @@ public class ProgressionManager : MonoBehaviour
 
     public void EndGame()
     {
+        playerDead = true;
         gameOverPanel.SetActive(true);
+        pointsPanel.SetActive(false);
+        scoreText.text = "Total Score: " + score;
         PauseGame();
+    }
+
+    public void AddScore()
+    {
+        score += scoreValue;
+        pointsText.text = "Points: " + score;
     }
 }
