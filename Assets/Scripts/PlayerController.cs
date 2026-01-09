@@ -58,4 +58,9 @@ public class PlayerController : MonoBehaviour
             timer);
         }
     }
+
+    public void PlayerCrashed() 
+    {
+        
+    }
 }
