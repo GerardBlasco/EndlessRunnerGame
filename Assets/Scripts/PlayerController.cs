@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
     public void PlayerCrashed() 
     {
         playerDead = true;
-        progressionManager.PauseGame();
+
+        progressionManager.EndGame();
     }
 }

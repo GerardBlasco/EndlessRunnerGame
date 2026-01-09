@@ -8,6 +8,7 @@ public class ProgressionManager : MonoBehaviour
 
     [SerializeField] bool playerDead = false;
     [SerializeField] private int points = 0;
+    [SerializeField] GameObject gameOverPanel;
 
     private int difficulty = 0;
 
@@ -64,5 +65,11 @@ public class ProgressionManager : MonoBehaviour
         {
             sectionsInGame[i].StopSectionMovement();
         }
+    }
+
+    public void EndGame()
+    {
+        gameOverPanel.SetActive(true);
+        PauseGame();
     }
 }
