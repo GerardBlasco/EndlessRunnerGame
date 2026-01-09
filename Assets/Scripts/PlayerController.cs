@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float timer = 0;
     private float timerDelay = 0.5f;
     private float speed = 5f;
+    private bool playerDead = false;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (inputManager.horizontal_ia.triggered)
+        if (inputManager.horizontal_ia.triggered && !playerDead)
         {
             ChangeRow();
         }
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerCrashed() 
     {
+        playerDead = true;
         progressionManager.PauseGame();
     }
 }
