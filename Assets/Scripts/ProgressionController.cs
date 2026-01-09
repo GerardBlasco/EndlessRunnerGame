@@ -55,4 +55,14 @@ public class ProgressionManager : MonoBehaviour
     {
         return points;
     }
+
+    public void PauseGame()
+    {
+        SectionController[] sectionsInGame = FindObjectsOfType<SectionController>();
+
+        for (int i = 0; i < sectionsInGame.Length; i++)
+        {
+            sectionsInGame[i].StopSectionMovement();
+        }
+    }
 }

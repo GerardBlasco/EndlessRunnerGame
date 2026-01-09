@@ -12,6 +12,7 @@ public class SectionController : MonoBehaviour
 
     private float moveSpeed = 0;
     private float maxSpeed = 40f;
+    private bool gamePaused = false;
 
     private void Start()
     {
@@ -22,8 +23,12 @@ public class SectionController : MonoBehaviour
     void Update()
     {
         DestroySection();
-        MoveSection();
-        SpeedUp();
+
+        if (!gamePaused)
+        {
+            MoveSection();
+            SpeedUp();
+        }
     }
 
     public void DestroySection()
@@ -45,5 +50,10 @@ public class SectionController : MonoBehaviour
     public void MoveSection()
     {
         transform.position += new Vector3(0, 0, -moveSpeed) * Time.deltaTime;
+    }
+
+    public void StopSectionMovement()
+    {
+        gamePaused = true;
     }
 }

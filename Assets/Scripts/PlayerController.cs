@@ -6,7 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] List<GameObject> rows = new List<GameObject>(3);
 
+    // ---------- MANAGERS ----------
     private InputManager inputManager;
+    private ProgressionManager progressionManager;
+
     private Rigidbody rb;
     private int currentRow = 1;
     private float timer = 0;
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         inputManager = InputManager.instance;
+        progressionManager = ProgressionManager.instance;
     }
 
     private void Update()
@@ -59,8 +63,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.CompareTag("Obstacle"))
+        {
+            PlayerCrashed();
+        }
+    }
+
     public void PlayerCrashed() 
     {
-        
+        progressionManager.PauseGame();
     }
 }
