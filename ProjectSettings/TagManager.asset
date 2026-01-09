@@ -6,7 +6,6 @@ TagManager:
   tags:
   - WallTrigger
   - MapSection
-  - ObstacleSpawn
   - Obstacle
   layers:
   - Default
