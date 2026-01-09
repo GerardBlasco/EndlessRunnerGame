@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7903017891515466208}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5662300001905864196}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 1084834552330424915}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 3995891063107453303}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 3234253620630136986}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 8192543949634788639}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1021,7 +1021,7 @@ GameObject:
   - component: {fileID: 7667057690209081584}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 8743632178059990506}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 4482058827438042240}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 671706819367330378}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1600,7 +1600,7 @@ GameObject:
   - component: {fileID: 1448660339801677196}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1864,7 +1864,7 @@ GameObject:
   - component: {fileID: 4644091869317111761}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2023,7 +2023,7 @@ GameObject:
   - component: {fileID: 9131469762990461930}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 4632994976558742827}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 6920533100015202822}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2392,7 +2392,7 @@ GameObject:
   - component: {fileID: 8175418896324759111}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 7029897595319793962}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2602,7 +2602,7 @@ GameObject:
   - component: {fileID: 478300317310795564}
   m_Layer: 0
   m_Name: RightRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2707,7 +2707,7 @@ GameObject:
   - component: {fileID: 3656052765172473641}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 5572950422666861679}
   m_Layer: 0
   m_Name: MiddleRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2917,7 +2917,7 @@ GameObject:
   - component: {fileID: 1718003099311948890}
   m_Layer: 0
   m_Name: LeftRow
-  m_TagString: ObstacleSpawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
