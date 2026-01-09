@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class PlayerController : MonoBehaviour
         if (inputManager.jump_ia.triggered && IsGrounded())
         {
             JumpPlayer();
+        }
+
+        if (inputManager.crouch_ia.triggered)
+        {
+            StartCoroutine(CrouchPlayer());
         }
 
         if (rb.velocity.y < 0)
@@ -84,13 +90,22 @@ public class PlayerController : MonoBehaviour
         rb.velocity += jumpSpeed * Vector3.up;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public IEnumerator CrouchPlayer()
+    {
+        transform.localScale = new Vector3(1f, 0.5f, 1f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Obstacle"))
         {
             PlayerCrashed();
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
