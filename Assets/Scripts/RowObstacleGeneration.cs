@@ -9,9 +9,6 @@ public class RowObstacleGeneration : MonoBehaviour
 
     private List<Transform> obstacleSpawns = new List<Transform>();
 
-    private int freeSlots;
-    private int maxObstacles;
-
     void Start()
     {
         foreach (Transform child in transform)
@@ -19,9 +16,8 @@ public class RowObstacleGeneration : MonoBehaviour
             obstacleSpawns.Add(child);
         }
 
-        freeSlots = obstacleSpawns.Count;
-
         SpawnObstacles();
+        DestroyCurrentSpawns();
     }
 
     public void SpawnObstacles()
@@ -36,6 +32,7 @@ public class RowObstacleGeneration : MonoBehaviour
 
             Instantiate(obstaclePrefab, obstacleSpawns[spawnIndex].position, Quaternion.identity, transform);
 
+            Destroy(obstacleSpawns[spawnIndex].gameObject);
             obstacleSpawns.RemoveAt(spawnIndex);
         }
     }
@@ -56,6 +53,14 @@ public class RowObstacleGeneration : MonoBehaviour
                 return obstacle.GetPrefab();
         }
 
-        return obstaclePrefabs[0].GetPrefab(); // fallback
+        return obstaclePrefabs[0].GetPrefab();
+    }
+
+    public void DestroyCurrentSpawns()
+    {
+        for (int i = 0; i < obstacleSpawns.Count; i++)
+        {
+            Destroy(obstacleSpawns[i].gameObject);
+        }
     }
 }
