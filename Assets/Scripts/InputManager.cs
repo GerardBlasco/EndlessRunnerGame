@@ -10,12 +10,16 @@ public class InputManager : MonoBehaviour
     [SerializeField] InputActionAsset map;
 
     public InputAction horizontal_ia;
+    public InputAction jump_ia;
+    public InputAction crouch_ia;
 
     private void Awake()
     {
         instance = this;
 
         horizontal_ia = map.FindActionMap("Movement").FindAction("Horizontal");
+        jump_ia = map.FindActionMap("Movement").FindAction("Jump");
+        crouch_ia = map.FindActionMap("Movement").FindAction("Crouch");
     }
 
     private void Start()

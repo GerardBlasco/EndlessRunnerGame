@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private float timerDelay = 0.5f;
     private float speed = 5f;
     private bool playerDead = false;
+    [SerializeField] private LayerMask groundLayer;
+    private float groundCheckDistance = 1f;
 
     private void Start()
     {
@@ -32,6 +34,11 @@ public class PlayerController : MonoBehaviour
         }
 
         MovePlayer();
+
+        if (inputManager.jump_ia.triggered && IsGrounded())
+        {
+            JumpPlayer();
+        }
     }
 
     public void ChangeRow()
@@ -64,9 +71,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void JumpPlayer()
+    {
+        rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Obstacle"))
+        {
+            PlayerCrashed();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Obstacle"))
         {
             PlayerCrashed();
         }
@@ -77,5 +97,11 @@ public class PlayerController : MonoBehaviour
         playerDead = true;
 
         progressionManager.EndGame();
+    }
+
+    bool IsGrounded()
+    {
+        // Raycast hacia abajo para detectar si estamos sobre el suelo
+        return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance + 0.1f, groundLayer);
     }
 }
