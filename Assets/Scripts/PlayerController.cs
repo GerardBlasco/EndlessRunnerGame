@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float timerDelay = 0.5f;
     private float speed = 5f;
     private bool playerDead = false;
+    [SerializeField] private float jumpSpeed = 7f;
     [SerializeField] private LayerMask groundLayer;
     private float groundCheckDistance = 1f;
 
@@ -38,6 +39,11 @@ public class PlayerController : MonoBehaviour
         if (inputManager.jump_ia.triggered && IsGrounded())
         {
             JumpPlayer();
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * -0.5f;
         }
     }
 
@@ -73,7 +79,9 @@ public class PlayerController : MonoBehaviour
 
     public void JumpPlayer()
     {
-        rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        //rb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
+
+        rb.velocity += jumpSpeed * Vector3.up;
     }
 
     private void OnTriggerEnter(Collider other)

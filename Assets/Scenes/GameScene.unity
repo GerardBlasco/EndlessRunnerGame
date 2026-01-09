@@ -1631,8 +1631,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553299081}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1683,6 +1683,7 @@ MonoBehaviour:
   - {fileID: 1598288041}
   - {fileID: 1897894691}
   - {fileID: 39136233}
+  jumpSpeed: 15
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
