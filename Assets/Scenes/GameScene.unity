@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4198490320992521136, guid: b397c02477bc2e44cb8c866a742be30a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1517,6 +1517,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1358687115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358687117}
+  - component: {fileID: 1358687116}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1358687116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358687115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ccc773eb72acb4eb6521c373e0850e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
+  SFXSource: {fileID: 0}
+  pikminRun: {fileID: 0}
+  gameTheme: {fileID: 0}
+  buttonSelect: {fileID: 0}
+--- !u!4 &1358687117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358687115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.2492294, y: -183.24487, z: 495.02786}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582401041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1818,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   jump_ia:
-    m_Name: 
+    m_Name: Jump_ia
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 78348a2b-17d2-4e6f-a519-604cd29fdb79
@@ -1778,7 +1827,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   crouch_ia:
-    m_Name: 
+    m_Name: Crouch_ia
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ff8f45cd-d8aa-4423-947d-bf6ceda74867
@@ -2521,6 +2570,7 @@ SceneRoots:
   - {fileID: 720066489}
   - {fileID: 932079320}
   - {fileID: 773871762}
+  - {fileID: 22611815}
   - {fileID: 1334589234}
   - {fileID: 1692910895}
-  - {fileID: 22611815}
+  - {fileID: 1358687117}

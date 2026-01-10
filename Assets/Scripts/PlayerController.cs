@@ -21,10 +21,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpSpeed = 7f;
     [SerializeField] private LayerMask groundLayer;
     private float groundCheckDistance = 1f;
+    private CapsuleCollider hitbox;
+    private float originalHitboxHeight;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        hitbox = GetComponent<CapsuleCollider>();
+        originalHitboxHeight = hitbox.height;
         inputManager = InputManager.instance;
         progressionManager = ProgressionManager.instance;
     }
@@ -96,11 +100,15 @@ public class PlayerController : MonoBehaviour
     public IEnumerator CrouchPlayer()
     {
         //transform.localScale = new Vector3(1f, 0.5f, 1f);
+        hitbox.height = originalHitboxHeight * 0.5f;
+        hitbox.center = new Vector3(0, -0.5f, 0);
         animator.SetBool("isRolling", true);
 
         yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("isRolling", false);
+        hitbox.height = originalHitboxHeight;
+        hitbox.center = Vector3.zero;
         //transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
