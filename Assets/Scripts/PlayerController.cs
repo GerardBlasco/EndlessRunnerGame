@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity += Vector3.up * -0.5f;
         }
+
+        animator.SetBool("isGrounded", IsGrounded());
+        animator.SetFloat("verticalSpeed", rb.velocity.y);
     }
 
     public void ChangeRow()
@@ -87,7 +90,6 @@ public class PlayerController : MonoBehaviour
     public void JumpPlayer()
     {
         //rb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
-        
         rb.velocity += jumpSpeed * Vector3.up;
     }
 
