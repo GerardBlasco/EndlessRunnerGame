@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] List<GameObject> rows = new List<GameObject>(3);
+    [SerializeField] Animator animator;
 
     // ---------- MANAGERS ----------
     private InputManager inputManager;
@@ -86,17 +87,19 @@ public class PlayerController : MonoBehaviour
     public void JumpPlayer()
     {
         //rb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
-
+        
         rb.velocity += jumpSpeed * Vector3.up;
     }
 
     public IEnumerator CrouchPlayer()
     {
-        transform.localScale = new Vector3(1f, 0.5f, 1f);
+        //transform.localScale = new Vector3(1f, 0.5f, 1f);
+        animator.SetBool("isRolling", true);
 
         yield return new WaitForSeconds(0.5f);
 
-        transform.localScale = new Vector3(1f, 1f, 1f);
+        animator.SetBool("isRolling", false);
+        //transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     /*private void OnTriggerEnter(Collider other)
