@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("- Music:")]
     public AudioClip gameTheme;
+    public AudioClip menuTheme;
 
     [Header("- Menu:")]
     public AudioClip buttonSelect;
@@ -45,6 +46,16 @@ public class AudioManager : MonoBehaviour
         return audioManager;
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void Awake()
     {
         musicSource.loop = true;
@@ -61,7 +72,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        musicSource.clip = gameTheme;
+        musicSource.clip = menuTheme;
         musicSource.Play();
     }
 
@@ -92,5 +103,19 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = previousMusicSource;
         musicSource.Play();
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
+        {
+            case "MainMenu":
+                PlayMusic(menuTheme);
+                break;
+
+            case "GameScene":
+                PlayMusic(gameTheme);
+                break;
+        }
     }
 }

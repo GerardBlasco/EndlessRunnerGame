@@ -372,12 +372,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 32
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -582,12 +582,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 32
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1075,12 +1075,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 32
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1493,8 +1493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -316.30298}
-  m_SizeDelta: {x: 704, y: 49.954}
+  m_AnchoredPosition: {x: 768, y: -776.12396}
+  m_SizeDelta: {x: 1496, y: 135.752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288494388
 MonoBehaviour:
@@ -1626,8 +1626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -246.349}
-  m_SizeDelta: {x: 704, y: 49.954}
+  m_AnchoredPosition: {x: 768, y: -620.37195}
+  m_SizeDelta: {x: 1496, y: 135.752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321548253
 MonoBehaviour:
@@ -1810,6 +1810,7 @@ MonoBehaviour:
   pikminDeath: {fileID: 8300000, guid: 4e914021ea21e8f44bed79681922a710, type: 3}
   pikminCrash: {fileID: 8300000, guid: 611838a14e4286d429d3db769d308065, type: 3}
   gameTheme: {fileID: 8300000, guid: 3b4629eb0c673b84ab075c1971b4d2e9, type: 3}
+  menuTheme: {fileID: 0}
   buttonSelect: {fileID: 0}
 --- !u!4 &1358687117
 Transform:
@@ -2146,8 +2147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -113.031}
-  m_SizeDelta: {x: 704, y: 36.774}
+  m_AnchoredPosition: {x: 768, y: -300.938}
+  m_SizeDelta: {x: 1496, y: 151.612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746638351
 MonoBehaviour:
@@ -2196,12 +2197,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 50
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2280,8 +2281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -47.322}
-  m_SizeDelta: {x: 704, y: 54.643997}
+  m_AnchoredPosition: {x: 768, y: -112.565994}
+  m_SizeDelta: {x: 1496, y: 185.13199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853858215
 MonoBehaviour:
@@ -2330,12 +2331,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 80
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 40
+  m_fontSizeMax: 80
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2521,8 +2522,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 372, y: -176.395}
-  m_SizeDelta: {x: 704, y: 49.954}
+  m_AnchoredPosition: {x: 768, y: -464.62}
+  m_SizeDelta: {x: 1496, y: 135.752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014714606
 MonoBehaviour:
@@ -2702,12 +2703,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 32
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
-  m_fontSizeMax: 24
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
