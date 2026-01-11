@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] List<GameObject> rows = new List<GameObject>(3);
     [SerializeField] Animator animator;
+    [SerializeField] ParticleSystem impactParticles;
 
     // ---------- MANAGERS ----------
     private InputManager inputManager;
@@ -128,7 +129,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.transform.CompareTag("Obstacle"))
         {
+            Instantiate(impactParticles, collision.contacts[0].point, new Quaternion(0, 0, 90, 0));
+
             PlayerCrashed();
+        }
+
+        if (collision.transform.CompareTag("Ground") && rb.velocity.y < 0)
+        {
+            Instantiate(impactParticles, collision.contacts[0].point, Quaternion.identity, collision.transform);
         }
     }
 

@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3977266833923945061, guid: b397c02477bc2e44cb8c866a742be30a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 3977266833923945061, guid: b397c02477bc2e44cb8c866a742be30a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2803,6 +2803,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 366050249770066812, guid: 51e06ff55da01c6438da5fb3b6d14200, type: 3}
+      propertyPath: impactParticles
+      value: 
+      objectReference: {fileID: 4550802160173976654, guid: 59e295f9be857f04099281fe87ca22f3, type: 3}
     - target: {fileID: 366050249770066812, guid: 51e06ff55da01c6438da5fb3b6d14200, type: 3}
       propertyPath: rows.Array.data[0]
       value: 

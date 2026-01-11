@@ -8,6 +8,8 @@ public class TriggerSectionGenerator : MonoBehaviour
     [SerializeField] List<GameObject> sectionPrefabs = new List<GameObject>();
     [SerializeField] private int difficulty = 0;
 
+    private float spawnDistance = 47.65f;
+
     private void Start()
     {
         progressionManager = ProgressionManager.instance;
@@ -22,7 +24,9 @@ public class TriggerSectionGenerator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("WallTrigger"))
         {
-            Instantiate(sectionPrefabs[progressionManager.GetDifficulty()], new Vector3(0, 0, 50f), Quaternion.identity);
+            Instantiate(sectionPrefabs[progressionManager.GetDifficulty()], GameObject.FindGameObjectWithTag("ConnectPoint").transform.position, Quaternion.identity);
+            Destroy(GameObject.FindGameObjectWithTag("ConnectPoint"));
+            //Instantiate(sectionPrefabs[progressionManager.GetDifficulty()], new Vector3(0, 0, spawnDistance), Quaternion.identity);
         }
     }
 }
