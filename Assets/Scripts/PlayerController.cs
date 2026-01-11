@@ -137,9 +137,14 @@ public class PlayerController : MonoBehaviour
         progressionManager.EndGame();
     }
 
-    bool IsGrounded()
+    public bool IsGrounded()
     {
         // Raycast hacia abajo para detectar si estamos sobre el suelo
         return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance + 0.1f, groundLayer);
+    }
+
+    public bool IsDead()
+    {
+        return playerDead;
     }
 }
