@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private float groundCheckDistance = 1f;
     private CapsuleCollider hitbox;
     private float originalHitboxHeight;
+    private Vector2 startTouchPosition;
+    private Vector2 endTouchPosition;
 
     private void Start()
     {
@@ -41,6 +44,8 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
+        SwipeControl();
 
         if (inputManager.horizontal_ia.triggered)
         {
@@ -139,12 +144,102 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        // Raycast hacia abajo para detectar si estamos sobre el suelo
         return Physics.Raycast(transform.position, Vector3.down, groundCheckDistance + 0.1f, groundLayer);
     }
 
     public bool IsDead()
     {
         return playerDead;
+    }
+
+    public void SwipeControl()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch inputTouch = Input.GetTouch(0);
+
+            if (inputTouch.phase == TouchPhase.Began)
+            {
+                startTouchPosition = inputTouch.position;
+            }
+
+            if (inputTouch.phase == TouchPhase.Ended)
+            {
+                endTouchPosition = inputTouch.position;
+                SwipeBehaviour();
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            startTouchPosition = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            endTouchPosition = Input.mousePosition;
+            SwipeBehaviour();
+        }
+
+        /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            startTouchPosition = Input.GetTouch(0).position;
+        }
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            endTouchPosition = Input.GetTouch(0).position;
+            audioManager.PlaySFX(audioManager.pikminSwipe);
+
+            if (endTouchPosition.x < startTouchPosition.x)
+            {
+                currentRow--;
+            }
+            else if (endTouchPosition.x > startTouchPosition.x)
+            {
+                currentRow++;
+            }
+
+            timer = 0f;
+            currentRow = Mathf.Clamp(currentRow, 0, 2);
+        }*/
+    }
+
+    public void SwipeBehaviour()
+    {
+        Vector2 swipe = endTouchPosition - startTouchPosition;
+
+        float swipeThreshold = 100f;
+
+        if (Mathf.Abs(swipe.x) > swipeThreshold)
+        {
+            audioManager.PlaySFX(audioManager.pikminSwipe);
+
+            if (endTouchPosition.x < startTouchPosition.x)
+            {
+                currentRow--;
+            }
+            else if (endTouchPosition.x > startTouchPosition.x)
+            {
+                currentRow++;
+            }
+
+            currentRow = Mathf.Clamp(currentRow, 0, 2);
+            timer = 0f;
+        }
+
+        if (Mathf.Abs(swipe.y) > swipeThreshold)
+        {
+            if (endTouchPosition.y > startTouchPosition.y && IsGrounded())
+            {
+                audioManager.PlaySFX(audioManager.pikminJump);
+                JumpPlayer();
+            }
+            else if (endTouchPosition.y < startTouchPosition.y && IsGrounded())
+            {
+                audioManager.PlaySFX(audioManager.pikminRoll);
+                StartCoroutine(CrouchPlayer());
+            }
+        }
     }
 }
