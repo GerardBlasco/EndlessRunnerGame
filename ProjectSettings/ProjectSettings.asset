@@ -162,6 +162,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.EndlessRunner
+    Standalone: com.DefaultCompany.Endless-Runner
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -845,7 +846,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 0cb56881-7dad-40df-86d9-4dbbdb686e0e
   framebufferDepthMemorylessMode: 0
