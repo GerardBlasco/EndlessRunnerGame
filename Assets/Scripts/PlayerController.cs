@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
     public void PlayerCrashed() 
     {
         audioManager.PlaySFX(audioManager.pikminCrash);
+        animator.SetBool("isDead", true);
         audioManager.PlaySFX(audioManager.pikminDeath);
         playerDead = true;
 
