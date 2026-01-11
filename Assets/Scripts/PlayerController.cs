@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         audioManager.PlaySFX(audioManager.pikminDeath);
         playerDead = true;
 
-        progressionManager.EndGame();
+        StartCoroutine(progressionManager.EndGame());
     }
 
     public bool IsGrounded()

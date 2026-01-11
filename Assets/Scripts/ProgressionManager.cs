@@ -80,13 +80,16 @@ public class ProgressionManager : MonoBehaviour
         }
     }
 
-    public void EndGame()
+    public IEnumerator EndGame()
     {
         playerDead = true;
-        gameOverPanel.SetActive(true);
-        pointsPanel.SetActive(false);
-        scoreText.text = "Total Score: " + score;
         PauseGame();
+        pointsPanel.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        gameOverPanel.SetActive(true);
+        scoreText.text = "Total Score: " + score;
     }
 
     public void AddScore()
