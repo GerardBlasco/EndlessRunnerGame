@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     // ---------- MANAGERS ----------
     private InputManager inputManager;
     private ProgressionManager progressionManager;
+    private AudioManager audioManager;
 
     private Rigidbody rb;
     private int currentRow = 1;
@@ -30,13 +31,20 @@ public class PlayerController : MonoBehaviour
         hitbox = GetComponent<CapsuleCollider>();
         originalHitboxHeight = hitbox.height;
         inputManager = InputManager.instance;
+        audioManager = AudioManager.instance;
         progressionManager = ProgressionManager.instance;
     }
 
     private void Update()
     {
-        if (inputManager.horizontal_ia.triggered && !playerDead)
+        if (playerDead)
         {
+            return;
+        }
+
+        if (inputManager.horizontal_ia.triggered)
+        {
+            audioManager.PlaySFX(audioManager.pikminSwipe);
             ChangeRow();
         }
 
@@ -44,11 +52,13 @@ public class PlayerController : MonoBehaviour
 
         if (inputManager.jump_ia.triggered && IsGrounded())
         {
+            audioManager.PlaySFX(audioManager.pikminJump);
             JumpPlayer();
         }
 
-        if (inputManager.crouch_ia.triggered)
+        if (inputManager.crouch_ia.triggered && IsGrounded())
         {
+            audioManager.PlaySFX(audioManager.pikminRoll);
             StartCoroutine(CrouchPlayer());
         }
 
@@ -130,6 +140,8 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerCrashed() 
     {
+        audioManager.PlaySFX(audioManager.pikminCrash);
+        audioManager.PlaySFX(audioManager.pikminDeath);
         playerDead = true;
 
         progressionManager.EndGame();

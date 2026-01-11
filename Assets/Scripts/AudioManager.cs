@@ -14,7 +14,11 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
 
     [Header("- Player:")]
-    public AudioClip pikminRun;
+    public AudioClip pikminSwipe;
+    public AudioClip pikminJump;
+    public AudioClip pikminRoll;
+    public AudioClip pikminDeath;
+    public AudioClip pikminCrash;
 
     [Header("- Music:")]
     public AudioClip gameTheme;
@@ -41,8 +45,6 @@ public class AudioManager : MonoBehaviour
         return audioManager;
     }
 
-    // AudioManager.instance.PlaySFX(AudioManager.instance.chestOpen);
-
     private void Awake()
     {
         musicSource.loop = true;
@@ -55,6 +57,12 @@ public class AudioManager : MonoBehaviour
 
         audioManager = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Start()
+    {
+        musicSource.clip = gameTheme;
+        musicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)
