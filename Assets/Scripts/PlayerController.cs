@@ -103,13 +103,11 @@ public class PlayerController : MonoBehaviour
 
     public void JumpPlayer()
     {
-        //rb.AddForce(Vector3.up * 10f, ForceMode.Impulse);
         rb.velocity += jumpSpeed * Vector3.up;
     }
 
     public IEnumerator CrouchPlayer()
     {
-        //transform.localScale = new Vector3(1f, 0.5f, 1f);
         hitbox.height = originalHitboxHeight * 0.5f;
         hitbox.center = new Vector3(0, -0.5f, 0);
         animator.SetBool("isRolling", true);
@@ -119,16 +117,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRolling", false);
         hitbox.height = originalHitboxHeight;
         hitbox.center = Vector3.zero;
-        //transform.localScale = new Vector3(1f, 1f, 1f);
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.CompareTag("Obstacle"))
-        {
-            PlayerCrashed();
-        }
-    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
